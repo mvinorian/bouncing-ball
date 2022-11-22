@@ -12,6 +12,7 @@ public class Main {
                 frame.setContentPane(new BallPanel(640, 480));
                 frame.pack();
                 frame.setVisible(true);
+                frame.setFocusable(true);
             }
         });
     }
