@@ -28,8 +28,10 @@ public class BallPanel extends JPanel {
         int speed = 5;
         int angle = rand.nextInt(360);
 
-        this.ball = new Ball(x, y, radius, speed, angle, Color.BLUE);
-        this.box = new BallArea(0, 0, width, height, Color.BLACK, Color.WHITE);
+        this.ball = new Ball(x, y, radius, speed, angle, new Color(0, 175, 175));
+        this.box = new BallArea(0, 0, width, height, new Color(40, 40, 40), Color.WHITE);
+        this.addMouseListener(this.ball);
+        this.addMouseMotionListener(this.ball);
         this.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
