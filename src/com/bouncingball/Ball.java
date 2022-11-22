@@ -46,6 +46,7 @@ public class Ball implements MouseListener, MouseMotionListener {
         if (this.status != Ball.PRESSED) {
             this.x += this.speedX;
             this.y += this.speedY;
+            this.resetMouseVelocity();
         }
 
         if (this.x < ballMinX) {
@@ -67,7 +68,6 @@ public class Ball implements MouseListener, MouseMotionListener {
             this.y = ballMaxY;
             this.release();
         }
-        this.resetMouseVelocity();
     }
 
     private void updateMousePosition(MouseEvent e) {
