@@ -8,8 +8,8 @@ import java.awt.event.MouseMotionListener;
 
 public class Ball implements MouseListener, MouseMotionListener {
 
-    public final static int PRESSED = 1;
-    public final static int RELEASED = 2;
+    public static final int PRESSED = 1;
+    public static final int RELEASED = 2;
 
     float x, y;
     float speed;
